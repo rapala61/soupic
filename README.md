@@ -4,7 +4,7 @@ A Soup from A picture
 
 ----
 #### How?
-1. Pic the ingredient picture.
+1. Pic the ingredient picture
 2. Make soup
 3. 😄😅
 
