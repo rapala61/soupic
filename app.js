@@ -6,7 +6,11 @@ var indexRouter = require('./routes/index');
 var mongoose = require('mongoose');
 
 // Load env variables
-dotEnv.load();
+if (!process.env.NODE_ENV) {
+  console.log(process.env.NODE_ENV);
+  dotEnv.load();
+}
+
 
 // connect to db
 mongoose.connect( process.env.MONGOLAB_URI || process.env.MONGODEV_URI );
