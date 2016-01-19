@@ -2,7 +2,7 @@
 A Soup from A picture
 
 #### Cookware and utensils
-- jQuery, bootstrap, express, gm, imageMagick, multer, dotenv, mongoose, and others.
+- jQuery, bootstrap, express, aws-sdk, S3, gm, imageMagick, multer, dotenv, mongoose, and others.
 
 ----
 
