@@ -3,27 +3,57 @@ header {
 }
 
 header {
-  height: 50px;
+  /*height: 100px;*/
+  width: 100%;
   background-color: lightsalmon;
+  text-align: center;
+  box-shadow: 0 2px 1px #777;
+  position: fixed;
+  z-index: 9999;
+}
+
+#nav-links a {
+  display: inline-block;
 }
 
 #logo {
-  text-align: center;
   color: white;
+  display: table;
+  height: 50px;
 }
 #logo > h1 {
   margin: 0;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+#logo > h1 > a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  padding-top: 60px;
+}
+
+.soup-container {
+  text-align: center;
 }
 
 #soup {
   width: 100%;
+  max-width: 450px;
 }
 
 .loading {
   height: 20px;
 }
 
+#upload-pic button {
+  background-color: lightseagreen;
+}
+
 footer {
   text-align: center;
-  color: white;
+  color: lightseagreen;
 }
