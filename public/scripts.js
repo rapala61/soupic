@@ -7,11 +7,11 @@ $(function() {
   $('#upload-pic').on('submit', function(e){
     e.preventDefault();
     var form = $(this);
-
+    var loading = $('.loading');
     var formData = new FormData();
-    formData.append('file', form.find('[name=pic]')[0].files[0]);
 
-    console.log(formData, form.find('[name=pic]')[0].files[0]);
+    formData.append('file', form.find('[name=pic]')[0].files[0]);
+    loading.removeClass('hidden');
     $.ajax({
       url: '/pics',
       type: 'post',
@@ -19,8 +19,8 @@ $(function() {
       contentType: false,
       processData: false,
       success: function(data) {
-        console.log(data);
-        $('#soup').attr('src', '/pics/'+data.id)
+        $('#soup').attr('src', data.url);
+        loading.addClass('hidden');
       }
     });
 

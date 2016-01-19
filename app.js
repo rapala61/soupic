@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 
 // Load env variables
 if (!process.env.NODE_ENV) {
-  console.log(process.env.NODE_ENV);
   dotEnv.load();
 }
 
