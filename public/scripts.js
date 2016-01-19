@@ -20,10 +20,24 @@ $(function() {
       contentType: false,
       processData: false,
       success: function(data) {
-        $('#soup').attr('src', data.url);
-        loading.addClass('hidden');
-        form.find('[type=submit]').prop('disabled', false);
+        if (data.error) {
+          console.log(data);
+          var $error = $('.error')
+          $error.find('.msg').text(data.msg);
+          $error.removeClass('hidden');
+
+          setTimeout(function() {
+            $error.addClass('hidden');
+            $error.find('msg').text('');
+          }, 5000);
+
+        } else {
+          $('#soup').attr('src', data.url);
+        }
       }
+    }).always(function() {
+      loading.addClass('hidden');
+      form.find('[type=submit]').prop('disabled', false);
     });
 
   });

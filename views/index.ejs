@@ -11,7 +11,19 @@
   </head>
   <body>
     <header>
+      <div class="row">
+        <div class="col-sm-2">
 
+        </div>
+
+        <div id="logo" class="col-sm-8">
+            <h1>SouPic</h1>
+        </div>
+
+        <div class="col-sm-2">
+
+        </div>
+      </div>
     </header>
 
     <div class="container">
@@ -20,13 +32,15 @@
 
         </div>
         <div class="col-xs-8 col-sm-4">
-          <h1>SouPic</h1>
           <form id="upload-pic" class="well">
             <input type="file" name="pic" value="">
             <button class="btn btn-primary" type="submit" name="name">
               Make soup <img class="hidden loading" src="/img/loading.gif" alt=""/>
             </button>
           </form>
+          <div class="hidden error bg-danger">
+            <p class="msg"><!-- Error message --></p>
+          </div>
         </div>
         <div class="col-md-2 col-sm-4">
 
