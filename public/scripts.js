@@ -9,6 +9,7 @@ $(function() {
     var form = $(this);
     var loading = $('.loading');
     var formData = new FormData();
+    form.find('[type=submit]').prop('disabled', true);
 
     formData.append('file', form.find('[name=pic]')[0].files[0]);
     loading.removeClass('hidden');
@@ -21,6 +22,7 @@ $(function() {
       success: function(data) {
         $('#soup').attr('src', data.url);
         loading.addClass('hidden');
+        form.find('[type=submit]').prop('disabled', false);
       }
     });
 
