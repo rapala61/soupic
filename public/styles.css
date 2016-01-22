@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('./img/soups.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 header {
   margin-bottom: 10px;
 }
@@ -8,32 +23,23 @@ header {
   background-color: lightsalmon;
   text-align: center;
   box-shadow: 0 2px 1px #777;
-  position: fixed;
-  z-index: 9999;
+  /*position: fixed;*/
+  /*z-index: 9999;*/
 }
 
-#nav-links a {
-  display: inline-block;
-}
-
-#logo {
-  color: white;
-  display: table;
-  height: 50px;
-}
-#logo > h1 {
-  margin: 0;
-  padding: 0;
-  display: table-cell;
-  vertical-align: middle;
-}
-#logo > h1 > a {
+#nav-links h2 a {
+  margin: 0 10px;
   text-decoration: none;
   color: white;
 }
 
-.container {
-  padding-top: 60px;
+#logo {
+  color: white;
+}
+
+#logo h2 a {
+  text-decoration: none;
+  color: white;
 }
 
 .soup-container {
@@ -49,11 +55,32 @@ header {
   height: 20px;
 }
 
-#upload-pic button {
+#upload-pic button,
+#login-btn {
   background-color: lightseagreen;
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
   text-align: center;
-  color: lightseagreen;
+  color: white;
+  background-color: lightsalmon;
+  box-shadow: 0 -2px 1px #777;
+}
+
+.va-container {
+  display: table;
+  height: 50px;
+}
+
+.va-element {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.100-width {
+  width: 100%;
 }

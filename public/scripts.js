@@ -1,6 +1,8 @@
 console.log('loaded');
 
 
+
+
 $(function() {
 
 
@@ -42,6 +44,21 @@ $(function() {
 
   });
 
+  $('form.login').on('submit', function() {
+    $('#login.modal').modal('hide');
+  });
+
+  $('form.signup').on('submit', function() {
+    $('#signup.modal').modal('hide');
+  });
+
+  $('#signup-btn').on('click', function() {
+    $('form.signup').submit();
+  });
+
+  $('#login-btn').on('click', function() {
+    $('form.login').submit();
+  });
 
 
 });

@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.2.30",
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.14.2",
+    "client-sessions": "^0.7.0",
     "dotenv": "^1.2.0",
     "ejs": "^2.3.4",
     "express": "^4.13.3",

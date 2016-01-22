@@ -1,0 +1,25 @@
+<div id="signup" class="modal fade bs-example-modal-sm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Signup</h5>
+      </div>
+      <div class="modal-body">
+        <form class="signup" action="/signup" method="post">
+          <div class="form-group">
+            <label for="">Username</label>
+            <input type="text" class="form-control" name="user[username]" value="" placeholder="username">
+            <label for="">Email</label>
+            <input type="text" class="form-control" name="user[email]" value="" placeholder="email">
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="user[password]" value="" placeholder="password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button  id="signup-btn" type="button" class="btn btn-primary">Signup</button>
+      </div>
+    </div>
+  </div>
+</div>

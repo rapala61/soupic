@@ -1,0 +1,23 @@
+<header>
+  <div class="row">
+    <div class="hidden-xs col-sm-4">
+
+    </div>
+
+    <div id="logo" class="col-xs-12 col-sm-4 va-container">
+        <h2 class="va-element"><a href="/">SouPic</a></h2>
+    </div>
+
+    <div id="nav-container" class="hidden-xs col-sm-4">
+      <nav id="nav-links" class="va-container">
+        <% if (!user) { %>
+        <h2 class="va-element"><a href="#" data-toggle="modal" data-target="#login">Login</a></h2>
+        <h2 class="va-element"><a href="#" data-toggle="modal" data-target="#signup">Signup</a></h2>
+        <% }else { %>
+        <h2 class="va-element"><a href="/profile">Profile</a></h2>
+        <h2 class="va-element"><a href="/logout">Logout</a></h2>
+        <% } %>
+      </nav>
+    </div>
+  </div>
+</header>
