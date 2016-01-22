@@ -35,7 +35,8 @@ router.post('/signup', function( req, res, next ) {
     console.log(err, dbUser);
 
     if (!err) {
-      AuthHelper.loginUser( dbUser );
+      req[AuthHelper.sessionName].user = dbUser;
+      req.user = dbUser;
       res.redirect('/login');
     }else {
       res.redirect('/');
